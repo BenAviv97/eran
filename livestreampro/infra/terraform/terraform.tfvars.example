@@ -1,0 +1,3 @@
+region       = "us-west-2"
+cluster_name = "livestream-dev"
+subnet_ids   = ["subnet-123", "subnet-456"]
