@@ -4,26 +4,26 @@
 .PHONY: dev proto lint test-backend test-frontend chaos-smoke budget-check lighthouse
 
 dev:
-docker compose -f infra/docker/compose.local.yaml up --build
+	docker compose -f infra/docker/compose.local.yaml up --build
 
 proto:
-buf generate ./backend/proto
+	buf generate ./backend/proto
 
 lint:
-golangci-lint run ./...
-npm run --prefix frontend lint
+	golangci-lint run ./...
+	npm run --prefix frontend lint
 
 chaos-smoke:
-@echo "Running chaos experiments"
+	@echo "Running chaos experiments"
 
 budget-check:
-@echo "Checking Kubecost budgets"
+	@echo "Checking Kubecost budgets"
 
 lighthouse:
-npm run --prefix frontend lighthouse
+	npm run --prefix frontend lighthouse
 
 test-backend:
-go test ./...
+	cd backend && go test ./...
 
 test-frontend:
-npm run --prefix frontend test
+	npm run --prefix frontend test
