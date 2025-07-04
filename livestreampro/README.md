@@ -95,6 +95,14 @@ cd mobile
 npm install
 npm run android   # or: npm run ios
 ```
+### Seed Demo Data
+
+With the stack running you can populate the database with example channels and chat messages:
+
+```bash
+scripts/seed_demo.sh
+```
+
 
 ---
 
