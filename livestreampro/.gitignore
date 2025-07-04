@@ -1,0 +1,21 @@
+# General
+node_modules/
+*.log
+.env
+.env.local
+*.swp
+
+# Go
+bin/
+coverage.out
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Node
+**/dist/
+
+# Docker
+**/tmp/

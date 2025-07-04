@@ -1,0 +1,24 @@
+# /home/${USER}/livestreampro/infra/docker/compose.local.yaml
+version: "3.9"
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: stream
+      POSTGRES_PASSWORD: stream
+    ports:
+      - "5432:5432"
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+  nats:
+    image: nats:2
+    ports:
+      - "4222:4222"
+  api-gateway:
+    build: ../../backend/cmd/api-gateway
+    ports:
+      - "8080:8080"
+    env_file:
+      - ../../backend/.env

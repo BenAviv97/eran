@@ -1,0 +1,6 @@
+# /home/${USER}/livestreampro/infra/k8s/overlays/dev/helmfile.yaml
+# /home/${USER}/livestreampro/infra/k8s/overlays/dev/helmfile.yaml
+repositories:
+  - name: livestreampro
+    url: file://../../charts
+releases: []

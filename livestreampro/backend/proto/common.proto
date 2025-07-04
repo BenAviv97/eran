@@ -1,0 +1,5 @@
+// /home/${USER}/livestreampro/backend/proto/common.proto
+syntax = "proto3";
+package proto;
+
+message Empty {}
