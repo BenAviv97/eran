@@ -9,6 +9,7 @@
 ## Formatting & Linting
 - Run `make lint` to execute `golangci-lint` for Go and `npm run lint` for the frontend.
 - Code must be formatted with `gofmt` and Prettier; CI will fail otherwise.
+- Install pre-commit with `pip install pre-commit` then run `pre-commit install`.
 
 ## Pull Requests & CI
 - Push your branch and open a PR against `main`.
