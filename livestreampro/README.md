@@ -100,6 +100,10 @@ npm run android   # or: npm run ios
 
 ## 5  Configuration
 
+Template environment files are provided in `backend/.env.example` and
+`frontend/.env.local.example`. Copy them to `.env` and `.env.local`
+respectively before starting the application.
+
 Create the following files (never commit secrets):
 
 ```ini
