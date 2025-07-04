@@ -26,7 +26,7 @@ test-backend:
 	cd backend && go test ./...
 
 test-frontend:
-npm run --prefix frontend test
+	npm run --prefix frontend test
 
 pre-commit: lint test-backend test-frontend
 
