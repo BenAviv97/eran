@@ -55,6 +55,8 @@
 │   ├── moderation-policy.md
 │   ├── dmca-policy.md
 │   └── sre/runbooks/
+│       ├── general.md
+│       └── stream-outage.md
 └── .github/workflows/     # CI/CD pipelines
 ```
 
@@ -190,7 +192,7 @@ Autoscaling is handled by **KEDA** (CPU, GPU, NATS lag, WebRTC sessions).
 3. Run `make pre-commit` before pushing.
 4. Open PR → CI must pass, at least one maintainer review.
 
-Full guidelines in `docs/contributing.md`.
+Full guidelines in [docs/contributing.md](docs/contributing.md).
 
 ---
 
