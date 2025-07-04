@@ -19,3 +19,7 @@ coverage.out
 
 # Docker
 **/tmp/
+
+# React-Native
+mobile/android/app/build/
+mobile/ios/build/
