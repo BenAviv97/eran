@@ -123,9 +123,11 @@ NEXT_PUBLIC_HLS_URL=http://localhost:8080/hls
 | ------------- | -------------------------- | ----------------- |
 | Unit          | `go test`, Jest            | push / PR         |
 | Integration   | Testcontainers, Playwright | PR matrix         |
-| Security      | Trivy, Snyk                | PR blocker        |
+| Security      | Trivy (fail on HIGH+), Snyk | PR blocker        |
 | Accessibility | Lighthouse CI              | FE PRs            |
 | Chaos         | LitmusChaos                | nightly (staging) |
+
+Trivy scans all built Docker images and the job fails if any vulnerabilities with severity **HIGH** or greater are detected.
 
 Run locally:
 
