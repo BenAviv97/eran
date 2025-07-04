@@ -3,17 +3,15 @@ package main
 
 import (
 	"log"
-	"net/http"
+
+	"livestreampro/internal/gateway"
 )
 
 func main() {
-	http.HandleFunc("/healthz", func(w http.ResponseWriter, r *http.Request) {
-		w.WriteHeader(http.StatusOK)
-		w.Write([]byte("ok"))
-	})
+	e := gateway.NewRouter()
 
 	log.Println("api-gateway started on :8080")
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	if err := e.Start(":8080"); err != nil {
 		log.Fatal(err)
 	}
 }
