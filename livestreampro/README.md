@@ -73,6 +73,13 @@
 | Go             | 1.22    |
 | Make           | 4.4     |
 
+### Install Required Tooling
+
+```bash
+go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+go install github.com/bufbuild/buf/cmd/buf@latest
+```
+
 ### One-Command Bootstrap
 
 ```bash
