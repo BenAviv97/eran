@@ -1,7 +1,7 @@
 # /home/${USER}/livestreampro/Makefile
 # /home/${USER}/livestreampro/Makefile
 
-.PHONY: dev proto lint test-backend test-frontend chaos-smoke budget-check lighthouse
+.PHONY: dev proto lint test-backend test-frontend pre-commit chaos-smoke budget-check lighthouse
 
 dev:
 docker compose -f infra/docker/compose.local.yaml up --build
@@ -27,3 +27,5 @@ go test ./...
 
 test-frontend:
 npm run --prefix frontend test
+
+pre-commit: lint test-backend test-frontend
