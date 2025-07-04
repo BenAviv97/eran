@@ -1,6 +1,10 @@
 # General
 node_modules/
 *.log
+backend/.env
+frontend/.env.local
+!backend/.env.example
+!frontend/.env.local.example
 .env
 .env.local
 *.swp
