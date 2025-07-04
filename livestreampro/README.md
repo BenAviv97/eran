@@ -81,6 +81,11 @@ make dev                # builds images & starts full stack
 # API Gateway: http://localhost:8080
 # Grafana:     http://localhost:3001 (admin/admin)
 ```
+```bash
+cd mobile
+npm install
+npm run android   # or: npm run ios
+```
 
 ---
 
