@@ -89,16 +89,38 @@ make dev                # builds images & starts full stack
 # Web UI:      http://localhost:3000
 # API Gateway: http://localhost:8080
 # Grafana:     http://localhost:3001 (admin/admin)
+# Prometheus:  http://localhost:9090
+# Loki:        http://localhost:3100
 ```
 ```bash
 cd mobile
 npm install
 npm run android   # or: npm run ios
 ```
+### Seed Demo Data
+
+With the stack running you can populate the database with example channels and chat messages:
+
+```bash
+scripts/seed_demo.sh
+```
+
+
+Once the stack is running you can explore metrics and logs:
+
+- **Prometheus** at [http://localhost:9090](http://localhost:9090)
+- **Loki** at [http://localhost:3100](http://localhost:3100) or via Grafana's *Explore*
+- **Grafana** at [http://localhost:3001](http://localhost:3001) (admin/admin) with example dashboards for the API Gateway and streaming pipeline.
+
+Additional troubleshooting steps are available in [`docs/sre/runbooks`](docs/sre/runbooks).
 
 ---
 
 ## 5  Configuration
+
+Template environment files are provided in `backend/.env.example` and
+`frontend/.env.local.example`. Copy them to `.env` and `.env.local`
+respectively before starting the application.
 
 Create the following files (never commit secrets):
 

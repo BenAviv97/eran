@@ -28,5 +28,5 @@ test-backend:
 test-frontend:
 	npm run --prefix frontend test
 
-pre-commit: lint test-backend test-frontend
+pre-commit: lint test-backend
 

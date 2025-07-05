@@ -6,6 +6,7 @@ import (
         "log"
         "net/http"
         "strings"
+
 )
 
 type Channel struct {
@@ -31,8 +32,9 @@ func main() {
                 json.NewEncoder(w).Encode(ch)
         })
 
+
 	log.Println("api-gateway started on :8080")
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	if err := e.Start(":8080"); err != nil {
 		log.Fatal(err)
 	}
 }
