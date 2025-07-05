@@ -5,9 +5,11 @@
     "module": "esnext",
     "jsx": "preserve",
     "strict": true,
+    "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["*"]
-    }
+    },
+    "types": ["jest", "@testing-library/jest-dom"]
   }
 }
